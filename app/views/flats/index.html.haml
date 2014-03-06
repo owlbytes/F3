@@ -1,0 +1,16 @@
+%h1 Find a Flat
+
+- @flats.each do |flat|
+  %h4
+    = link_to flat.name, flat
+  .IndexPageTable
+  %table
+    .IndexPageTableHeaders
+    %tr
+      %th Bedrooms
+      %th Location
+    .IndexPageTableValues
+    %tr
+      %th 
+        = flat.rooms
+

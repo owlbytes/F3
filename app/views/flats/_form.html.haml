@@ -1,0 +1,22 @@
+= form_for @flat do |f|
+  - if @flat.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@flat.errors.count, "error")} prohibited this flat from being saved:"
+      %ul
+        - @flat.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :rooms
+    = f.text_field :rooms
+  .field
+    = f.label :lat
+    = f.text_field :lat
+  .field
+    = f.label :lon
+    = f.text_field :lon
+  .actions
+    = f.submit 'Save'
