@@ -7,5 +7,19 @@
 = @flat.rooms
 %p
 
+%p Description:
+= @flat.flatdesc
 
-= link_to 'More Flats', flats_path
+%p Address:
+= @flat.address
+
+%hr
+%b Nearby Flats:
+- for flat in @flat.nearbys(20, :units => :km)
+
+  %li
+    = link_to flat.address, flat
+    (#{flat.distance} km)
+
+/ Get nearby flats within 20km. Had to specify units to km as default is miles. Doesn't return anything if the flat hasn't been geocoded or if there are no flats that match.   
+

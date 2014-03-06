@@ -2,9 +2,11 @@ class CreateFlats < ActiveRecord::Migration
   def change
     create_table :flats do |t|
       t.string :name
+      t.string :address
       t.integer :rooms
-      t.decimal :lat, :precision => 10, :scale => 6
-      t.decimal :lon, :precision => 10, :scale => 6
+      t.string :flatdesc
+      t.decimal :latitude, :precision => 10, :scale => 6
+      t.decimal :longitude, :precision => 10, :scale => 6
 
       t.timestamps
     end

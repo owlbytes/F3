@@ -15,9 +15,11 @@ ActiveRecord::Schema.define(:version => 20140306213558) do
 
   create_table "flats", :force => true do |t|
     t.string   "name"
+    t.string   "address"
     t.integer  "rooms"
-    t.decimal  "lat",        :precision => 10, :scale => 6
-    t.decimal  "lon",        :precision => 10, :scale => 6
+    t.string   "flatdesc"
+    t.decimal  "latitude",   :precision => 10, :scale => 6
+    t.decimal  "longitude",  :precision => 10, :scale => 6
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end

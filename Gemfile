@@ -7,6 +7,7 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 gem "haml-rails"
+gem 'geocoder'
 
 group :development do
   gem 'erb2haml'
