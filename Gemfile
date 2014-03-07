@@ -9,10 +9,14 @@ gem 'pg'
 gem "haml-rails"
 gem 'geocoder'
 
-group :development do
+group :development, :test do
   gem 'erb2haml'
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem "shoulda"
+  gem "database_cleaner"
 end 
+ 
 
 # Gems used only for assets and not required
 # in production environments by default.
