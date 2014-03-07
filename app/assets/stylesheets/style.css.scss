@@ -1,4 +1,6 @@
+// Some Styling to Override Bootstrap's Default
 
+// ------------------------------------------------------------
 // general styling
 .body {
   margin: 0px;
@@ -35,6 +37,7 @@ a:hover {
   padding-bottom: 5px;
 }
 
+// ------------------------------------------------------------
 // indexpage
 .indexpageTitle {
   margin-left: auto;
@@ -56,9 +59,8 @@ a:hover {
   padding-right: 40px;
 }
 
-.IndexPageTable td {
-}
 // ------------------------------------------------------------
+// showpage
 .showflatname {
   text-align: center;
 }
@@ -89,7 +91,9 @@ a:hover {
     padding-bottom: 5px;
   }
 }
+
 // ------------------------------------------------------------
+// footer
 
 footer {
   padding-top: 20px;

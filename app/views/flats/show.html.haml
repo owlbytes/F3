@@ -17,6 +17,8 @@
   %p Address:
   = @flat.address
 
+
+/The image is being rendered via the Google Static Maps API based on the flat latitude and longitude coordinates. set zoom to 15 (instead of standard 16) as a personal pref.
 .showflatmap
   = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@flat.latitude}%2C#{@flat.longitude}" 
 
@@ -26,6 +28,8 @@
 
 .shownearbyflatstitle
   %h5 Nearby Flats
+
+/ Get nearby flats within 20km. Had to specify units to km as default is miles. Doesn't return anything if the flat hasn't been geocoded or if there are no flats that match.  
 .shownearbyflatslist
   - for flat in @flat.nearbys(20, :units => :km).where(:rooms == @flat.rooms)
     %li
@@ -33,5 +37,5 @@
     (#{flat.distance}   km)
 
 
-/ Get nearby flats within 20km. Had to specify units to km as default is miles. Doesn't return anything if the flat hasn't been geocoded or if there are no flats that match.   
+ 
 
