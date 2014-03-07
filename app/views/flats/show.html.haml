@@ -1,25 +1,32 @@
 #notice= notice
 
-%h3
-= @flat.name
+.showflatname
+  %h3
+    = @flat.name
 
-%p Rooms:
-= @flat.rooms
-%p
 
-%p Description:
-= @flat.flatdesc
+.showflatrooms
+  %p Rooms: 
+  = @flat.rooms
 
-%p Address:
-= @flat.address
+.showflatdescription
+  %p Description:
+  = @flat.flatdesc
+
+.showflataddress
+  %p Address:
+  = @flat.address
+
 
 %hr
-%b Nearby Flats:
-- for flat in @flat.nearbys(20, :units => :km)
 
-  %li
+.shownearbyflatstitle
+  %h5 Nearby Flats
+.shownearbyflatslist
+  - for flat in @flat.nearbys(20, :units => :km)
+    %li
     = link_to flat.address, flat
-    (#{flat.distance} km)
+    (#{flat.distance}   km)
 
 / Get nearby flats within 20km. Had to specify units to km as default is miles. Doesn't return anything if the flat hasn't been geocoded or if there are no flats that match.   
 

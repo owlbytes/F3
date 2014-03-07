@@ -1,0 +1,89 @@
+
+// general styling
+.body {
+  margin: 0px;
+  text-decoration: none;
+  background-color: #9EFFC0;
+  color: #4F7F60;
+
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5, 
+a{
+  color: #4F7F60;
+}
+
+a:hover { 
+  background-color:#77BF90; 
+  color: #fff; 
+}
+
+
+// ------------------------------------------------------------
+// app layout
+.Appheader {
+  background-color: #8FE5AC;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+// indexpage
+.indexpageTitle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.indexpageflatname {
+  margin-left:3%;
+  color:  #4F7F60;
+  padding-top: 20px;
+}
+
+.IndexPageTable {
+  margin-left: 3%;
+  width: 60%;
+}
+.IndexPageTable th {
+  padding-right: 40px;
+}
+
+.IndexPageTable td {
+}
+// ------------------------------------------------------------
+.showflatname {
+  text-align: center;
+}
+
+.showflatrooms,
+.showflatdescription,
+.showflataddress {
+  margin-left: 3%;
+  padding-bottom: 20px;
+}
+
+.shownearbyflatstitle {
+  margin-left: 3%;
+}
+
+.shownearbyflatslist {
+  margin-left: 3%;
+  li {
+    padding-bottom: 5px;
+  }
+}
+// ------------------------------------------------------------
+
+footer {
+  padding-top: 20px;
+  text-align: center;
+}
+ 
