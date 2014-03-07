@@ -1,12 +1,11 @@
 class Flat < ActiveRecord::Base
 
   # ensures only valid data is saved into db
-  validates :name, :presence => true 
-  validates :rooms, :presence => true
-  validates :flatdesc, :presence => true
-  validates :address, :presence => true
-  validates :latitude, :presence => true
-  validates :longitude, :presence => true
+  validates_presence_of :name 
+  validates_presence_of :rooms 
+  validates_presence_of :flatdesc 
+  validates_presence_of :latitude 
+  validates_presence_of :longitude 
 
 
   #making sure the key values are accessible
