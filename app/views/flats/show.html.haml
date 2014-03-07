@@ -17,16 +17,21 @@
   %p Address:
   = @flat.address
 
+.showflatmap
+  = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@flat.latitude}%2C#{@flat.longitude}" 
+
+
 
 %hr
 
 .shownearbyflatstitle
   %h5 Nearby Flats
 .shownearbyflatslist
-  - for flat in @flat.nearbys(20, :units => :km)
+  - for flat in @flat.nearbys(20, :units => :km).where(:rooms == @flat.rooms)
     %li
     = link_to flat.address, flat
     (#{flat.distance}   km)
+
 
 / Get nearby flats within 20km. Had to specify units to km as default is miles. Doesn't return anything if the flat hasn't been geocoded or if there are no flats that match.   
 
